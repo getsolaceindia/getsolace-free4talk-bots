@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image" href="/logo/getsolace-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GetSolace Bots</title>
+    
+    <!-- GitHub Pages routing fix -->
+    <script>
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2463663710928497" crossorigin="anonymous"></script>
+    <meta name="google-site-verification" content="twUZyM1XWq6ppvi1DwXin0tuk72sQ1J6DhTsu7z320k" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
