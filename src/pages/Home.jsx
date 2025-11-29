@@ -147,7 +147,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="developer-info">
-                <h3 className="developer-name">Aang</h3>
+                <h3 className="developer-name">Aang (My Free4Talk Username)</h3>
                 <p className="developer-title">Engineer</p>
                 <div className="developer-location">📍 Tamil Nadu, India</div>
                 
