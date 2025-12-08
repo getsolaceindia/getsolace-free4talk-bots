@@ -27,25 +27,26 @@ export default function Home() {
       <section className="hero">
         <div className="container">
           {/* News Banner for New Chatbot Version */}
-          <motion.div
+          <motion.div 
             className="news-banner"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <div className="news-badge">NEW</div>
+            <div className="news-badge">NEW 🚀</div>
             <div className="news-content">
               <div className="news-title">
-                <span className="bot-name">Free4Talk Chatbot</span> updated to <strong>v1.0.1</strong> — Bug Fixes!
+                <span className="bot-name">Free4Talk Chatbot</span> updated to <strong>v2.1.0</strong> - Major Feature Update!
               </div>
               <div className="news-description">
-                Replies are now natural length, context analysis improved, no more old message bug.
+                Dual API support (Gemini + Groq), 10+ AI models, better UI, ultra-fast responses!
               </div>
             </div>
             <Link to="/bots/chatbot" className="btn btn-primary">
               Learn More
             </Link>
           </motion.div>
+          
           
           <motion.div
             className="hero-content"

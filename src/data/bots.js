@@ -7,7 +7,7 @@ export const bots = [
     icon: '🎵',
     status: 'Available',
     premium: true,
-    price: 'Free + $3/month',
+    price: 'Free • 3/month',
     features: [
       'Command Control',
       'AI Autoplay',
@@ -19,36 +19,35 @@ export const bots = [
     rating: 5,
     category: 'Entertainment',
     tags: ['Music', 'AI', 'Command Control'],
-    downloadLink: 'downloads/music-bot-extension.zip',
+    downloadLink: '/downloads/music-bot-extension.zip',
     docsLink: '/bots/music-bot',
-    color: 'linear-gradient(135deg, #1e293b 0%, #334155 100%)'  // Professional dark slate
+    color: 'linear-gradient(135deg, #1e293b 0%, #334155 100%)' // Professional dark slate
   },
-  
   {
-  id: 'chatbot',
-  name: 'Free4Talk Chatbot',
-  tagline: 'Universal AI Chat Companion',
-  description: 'Powered by Gemini AI. Natural conversations, personality profiles, and smart context-aware responses. v1.0.1 with bug fixes.',
-  icon: '🤖',
-  status: 'Available',
-  premium: true,
-  price: 'Free / $5/month',
-  features: [
-    'Natural AI Chat',
-    'Personality Profiles',
-    'Person Facts Memory',
-    'Auto Reactions',
-    'Premium License System',
-    'v1.0.1 - Bug Fixes'
-  ],
-  downloads: 0,
-  rating: 5.0,
-  category: 'Productivity',
-  tags: ['AI', 'Chat', 'Gemini', 'Conversational'],
-  downloadLink: '/downloads/chatbot-extension.zip',
-  docsLink: '/bots/chatbot',
-  color: 'linear-gradient(135deg, #2d1e3a 0%, #3d2e4a 100%)' // Professional purple
-},
+    id: 'chatbot',
+    name: 'Free4Talk Chatbot',
+    tagline: 'Universal AI Chat Companion',
+    description: 'Powered by Gemini & Groq AI. Enterprise-grade UI with 10+ models, dual API support, and intelligent context-aware responses. v1.4 - Major Feature Update!',
+    icon: '🤖',
+    status: 'Available',
+    premium: true,
+    price: 'Free • 5₹/month',
+    features: [
+      'Gemini + Groq APIs',
+      '10+ AI Models',
+      'Enterprise UI',
+      'Person Facts Memory',
+      'Profile System',
+      'Ultra-Fast Responses'
+    ],
+    downloads: 0,
+    rating: 5.0,
+    category: 'Productivity',
+    tags: ['AI', 'Chat', 'Gemini', 'Groq', 'Enterprise'],
+    downloadLink: '/downloads/chatbot-extension.zip',
+    docsLink: '/bots/chatbot',
+    color: 'linear-gradient(135deg, #2d1e3a 0%, #3d2e4a 100%)' // Professional purple
+  },
 
   {
     id: 'assistant-bot',

@@ -152,43 +152,87 @@ export default function ChatbotInstall() {
           </div>
         </motion.section>
 
-        {/* Step 3: Get API Key */}
-        <motion.section
-          className="install-step"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <div className="step-header">
-            <div className="step-number">3</div>
-            <div>
-              <h2>Set Up Your API Key</h2>
-              <p>We recommend using Google Gemini as a free option</p>
-            </div>
-          </div>
+        {/* Step 3 - Get API Key */}
+<motion.section 
+  className="install-step" 
+  initial={{ opacity: 0, y: 30 }} 
+  whileInView={{ opacity: 1, y: 0 }} 
+  viewport={{ once: true }}
+>
+  <div className="step-header">
+    <div className="step-number">3</div>
+    <div>
+      <h2>Set Up Your API Key</h2>
+      <p>Choose between Gemini (standard) or Groq (ultra-fast)</p>
+    </div>
+  </div>
 
-          <div className="step-content">
-            <div className="api-options">
-              <div className="api-option recommended">
-                <div className="api-option-header">
-                  <h3>Google Gemini</h3>
-                  <span className="recommended-badge">Supported</span>
-                </div>
-                <ol>
-                  <li>Go to <a href="https://makersuite.google.com/app/apikey" target="_blank" rel="noopener noreferrer">Google AI Studio</a></li>
-                  <li>Create or sign in with your Google account</li>
-                  <li>Generate an API key and copy it</li>
-                  <li>In the extension popup, paste your API key</li>
-                </ol>
+  <div className="step-content">
+    <div className="api-options">
+      {/* Gemini Option */}
+      <div className="api-option recommended">
+        <div className="api-option-header">
+          <h3>🧠 Google Gemini</h3>
+          <span className="recommended-badge">Recommended</span>
+        </div>
+        <p style={{ marginBottom: '12px', color: 'var(--text-secondary)' }}>
+          Standard speed, high quality responses. Best for general use.
+        </p>
+        <ol>
+          <li>Go to <a href="https://makersuite.google.com/app/apikey" target="_blank" rel="noopener noreferrer">Google AI Studio</a></li>
+          <li>Create or sign in with your Google account</li>
+          <li>Generate an API key and copy it</li>
+          <li>In the extension popup, select <strong>Gemini</strong> as provider</li>
+          <li>Paste your API key in the Gemini API Key field</li>
+        </ol>
+        <div className="info-box" style={{ marginTop: '12px', background: 'var(--primary-50)', borderColor: 'var(--primary-200)' }}>
+          <p><strong>Models Available:</strong></p>
+          <ul style={{ marginTop: '8px', paddingLeft: '20px' }}>
+            <li>Gemini 3 Pro Preview (Latest & Most Advanced)</li>
+            <li>Gemini 2.0 Flash (Balanced speed & quality)</li>
+            <li>Gemini 2.5 Flash Lite (Fastest Gemini model)</li>
+            <li>Gemini 2.5 Pro (Highest quality)</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Groq Option */}
+            <div className="api-option">
+              <div className="api-option-header">
+                <h3>⚡ Groq API</h3>
+                <span className="recommended-badge" style={{ background: '#f59e0b', color: 'white' }}>Ultra-Fast</span>
+              </div>
+              <p style={{ marginBottom: '12px', color: 'var(--text-secondary)' }}>
+                <strong>10x faster responses</strong> with LPU acceleration. Perfect for rapid conversations!
+              </p>
+              <ol>
+                <li>Go to <a href="https://console.groq.com" target="_blank" rel="noopener noreferrer">Groq Console</a></li>
+                <li>Sign up or log in (free account)</li>
+                <li>Navigate to API Keys section</li>
+                <li>Create a new API key and copy it</li>
+                <li>In the extension popup, select <strong>Groq</strong> as provider</li>
+                <li>Paste your API key in the Groq API Key field</li>
+              </ol>
+              <div className="info-box" style={{ marginTop: '12px', background: '#fffbeb', borderColor: '#fde68a' }}>
+                <p><strong>Models Available:</strong></p>
+                <ul style={{ marginTop: '8px', paddingLeft: '20px' }}>
+                  <li>Llama 3.3 70B Versatile (Most capable)</li>
+                  <li>Llama 3.1 8B Instant (Blazing fast)</li>
+                </ul>
+                <p style={{ marginTop: '8px', fontSize: '13px', color: '#92400e' }}>
+                  <strong>Why Groq?</strong> Lightning-fast LPU architecture delivers responses up to 10x faster than traditional GPUs!
+                </p>
               </div>
             </div>
-
-            <div className="warning-box warning-box-small">
-              <Key size={20} />
-              <p><strong>Keep your key safe:</strong> Never share your API key publicly. Treat it like a password.</p>
-            </div>
           </div>
-        </motion.section>
+      
+          <div className="warning-box warning-box-small">
+            <Key size={20} />
+            <p><strong>Keep your keys safe!</strong> Never share your API keys publicly. Treat them like passwords. You can use both APIs simultaneously!</p>
+          </div>
+        </div>
+      </motion.section>
+      
 
         {/* Step 4: Configure */}
         <motion.section
@@ -208,25 +252,30 @@ export default function ChatbotInstall() {
           <div className="step-content">
             <div className="config-items">
               <div className="config-item">
-                <h4>1) API Provider & Key</h4>
-                <p>Choose Gemini, then paste your API key</p>
+                <h4>1. API Provider & Key</h4>
+                <p>Choose <strong>Gemini</strong> (standard) or <strong>Groq</strong> (ultra-fast), then paste your API key. The extension automatically shows compatible models.</p>
               </div>
+              
               <div className="config-item">
-                <h4>2) Bot Username</h4>
-                <p>Enter your Free4Talk username (the bot will respond using this identity)</p>
+                <h4>2. AI Model Selection</h4>
+                <p>Select your preferred model. Gemini models show when Gemini is selected, Groq models show when Groq is selected. The extension prevents mismatches automatically!</p>
               </div>
+              
               <div className="config-item">
-                <h4>3) Friends List (Optional)</h4>
+                <h4>3. Bot Username</h4>
+                <p>Enter your Free4Talk username - the bot will respond using this identity</p>
+              </div>
+              
+              <div className="config-item">
+                <h4>4. Friends List (Optional)</h4>
                 <p>Add usernames of friends the bot knows about</p>
               </div>
+              
               <div className="config-item">
-                <h4>4) Facts & Persona (Optional)</h4>
-                <p>Add custom facts about yourself and define the bot's personality</p>
+                <h4>5. Facts & Persona (Optional)</h4>
+                <p>Add custom facts about people and define the bot's personality</p>
               </div>
-              <div className="config-item">
-                <h4>5) Authorized Users (Optional)</h4>
-                <p>Add usernames of people who can interact with the bot. Leave empty to allow everyone</p>
-              </div>
+              
             </div>
 
             <div className="success-box">

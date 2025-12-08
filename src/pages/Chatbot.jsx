@@ -66,120 +66,142 @@ export default function Chatbot() {
           </div>
         </motion.div>
 
-        {/* What's New Banner - Version 1.0.1 */}
-        <motion.div
+        {/* What's New Banner - Version 1.4 */}
+        <motion.div 
           className="whats-new-banner"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          <div className="new-badge">v1.0.1</div>
+          <div className="new-badge">v1.4 🚀</div>
           <div className="whats-new-content">
-            <h3>Bug Fixes & Improvements</h3>
+            <h3>Major Feature Update - Dual API Support!</h3>
             <div className="new-features-list">
               <div className="new-feature-item">
                 <Check size={20} />
-                <span>Fixed Variable Reply Length - Bot now responds with natural varying character lengths instead of always hitting max limit</span>
+                <span><strong>Groq API Integration</strong> - Ultra-fast responses with LPU acceleration (up to 10x faster than Gemini!)</span>
               </div>
               <div className="new-feature-item">
                 <Check size={20} />
-                <span>Improved Response Reliability - Enhanced context analysis eliminates intermittent non-responses</span>
+                <span><strong>10+ AI Models</strong> - Choose from Gemini 2.0/2.5/3.0 models + Llama 3.1/3.3 on Groq</span>
               </div>
               <div className="new-feature-item">
                 <Check size={20} />
-                <span>Fixed Scroll Reply Bug - Bot no longer replies to old messages when scrolled up in chat history</span>
+                <span><strong>Enterprise-Grade UI</strong> - Beautiful tab-based interface with status indicators and real-time model display</span>
+              </div>
+              <div className="new-feature-item">
+                <Check size={20} />
+                <span><strong>Smart Model Switching</strong> - Auto-validates provider/model compatibility and prevents mismatches</span>
+              </div>
+              <div className="new-feature-item">
+                <Check size={20} />
+                <span><strong>Enhanced UX</strong> - Loading states, improved validation, keyboard shortcuts, better error handling</span>
               </div>
             </div>
           </div>
         </motion.div>
         
+        
 
-        {/* Key Features Highlight */}
-        <motion.section 
-          className="key-features-section"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <div className="section-header">
-            <h2>Powerful AI Features</h2>
-            <p>Everything you need for natural, intelligent conversations</p>
-          </div>
+        <motion.section className="key-features-section" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+  <div className="section-header">
+    <h2>Powerful AI Features</h2>
+    <p>Everything you need for natural, intelligent conversations</p>
+  </div>
 
-          <div className="key-features-grid">
-            <motion.div 
-              className="key-feature-card"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.2 }}
-            >
-              <div className="feature-icon-large">
-                <Sparkles size={32} />
-              </div>
-              <h3>Multiple AI Models</h3>
-              <p>Choose from various Gemini models:</p>
-              <ul className="feature-list">
-                <li><Check size={16} /> Gemini 2.0 Flash (Fastest)</li>
-                <li><Check size={16} /> Gemini 1.5 Flash</li>
-                <li><Check size={16} /> Gemini 1.5 Pro</li>
-                <li><Check size={16} /> Gemini Exp 1206 (Experimental)</li>
-              </ul>
-            </motion.div>
-
-            <motion.div 
-              className="key-feature-card"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.2 }}
-            >
-              <div className="feature-icon-large">
-                <Database size={32} />
-              </div>
-              <h3>Smart Memory System</h3>
-              <p>Advanced memory capabilities:</p>
-              <ul className="feature-list">
-                <li><Check size={16} /> Person Facts Database</li>
-                <li><Check size={16} /> Friends List Recognition</li>
-                <li><Check size={16} /> Context History (50 messages)</li>
-                <li><Check size={16} /> Custom Personality Prompts</li>
-              </ul>
-            </motion.div>
-
-            <motion.div 
-              className="key-feature-card"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.2 }}
-            >
-              <div className="feature-icon-large">
-                <Brain size={32} />
-              </div>
-              <h3>Intelligent Responses</h3>
-              <p>AI decides when to respond:</p>
-              <ul className="feature-list">
-                <li><Check size={16} /> Context-Aware Detection</li>
-                <li><Check size={16} /> Natural Conversation Flow</li>
-                <li><Check size={16} /> Auto Reactions (👍/❤️)</li>
-                <li><Check size={16} /> Smart Reply Timing</li>
-              </ul>
-            </motion.div>
-
-            <motion.div 
-              className="key-feature-card"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.2 }}
-            >
-              <div className="feature-icon-large">
-                <Shield size={32} />
-              </div>
-              <h3>Privacy & Control</h3>
-              <p>Your data stays private:</p>
-              <ul className="feature-list">
-                <li><Check size={16} /> Your Own API Key</li>
-                <li><Check size={16} /> No Data Collection</li>
-                <li><Check size={16} /> Local Storage Only</li>
-                <li><Check size={16} /> Full Transparency</li>
-              </ul>
-            </motion.div>
-          </div>
-        </motion.section>
+  <div className="key-features-grid">
+      {/* Feature 1 - Dual API Support */}
+      <motion.div className="key-feature-card" whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
+        <div className="feature-icon-large">
+          <Zap size={32} />
+        </div>
+        <h3>Dual API Support</h3>
+        <p>Choose between Gemini and Groq</p>
+        <ul className="feature-list">
+          <li><Check size={16} /> Google Gemini - Standard speed, high quality</li>
+          <li><Check size={16} /> Groq API - Ultra-fast LPU acceleration</li>
+          <li><Check size={16} /> Seamless switching between providers</li>
+          <li><Check size={16} /> Auto-validation prevents mismatches</li>
+        </ul>
+      </motion.div>
+  
+      {/* Feature 2 - 10+ AI Models */}
+      <motion.div className="key-feature-card" whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
+        <div className="feature-icon-large">
+          <Sparkles size={32} />
+        </div>
+        <h3>10+ AI Models</h3>
+        <p>Select the perfect model for your needs</p>
+        <ul className="feature-list">
+          <li><Check size={16} /> Gemini 3 Pro Preview (Latest)</li>
+          <li><Check size={16} /> Gemini 2.0 Flash / 2.5 Flash Lite</li>
+          <li><Check size={16} /> Llama 3.3 70B Versatile (Groq)</li>
+          <li><Check size={16} /> Llama 3.1 8B Instant (Groq)</li>
+        </ul>
+      </motion.div>
+  
+      {/* Feature 3 - Enterprise UI */}
+      <motion.div className="key-feature-card" whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
+        <div className="feature-icon-large">
+          <Settings size={32} />
+        </div>
+        <h3>Enterprise-Grade UI</h3>
+        <p>Professional interface with modern design</p>
+        <ul className="feature-list">
+          <li><Check size={16} /> Tab-based navigation</li>
+          <li><Check size={16} /> Real-time status indicators</li>
+          <li><Check size={16} /> Loading states & validation</li>
+          <li><Check size={16} /> Responsive gradient design</li>
+        </ul>
+      </motion.div>
+  
+      {/* Feature 4 - Smart Memory System */}
+      <motion.div className="key-feature-card" whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
+        <div className="feature-icon-large">
+          <Database size={32} />
+        </div>
+        <h3>Smart Memory System</h3>
+        <p>Advanced memory capabilities</p>
+        <ul className="feature-list">
+          <li><Check size={16} /> Person Facts Database</li>
+          <li><Check size={16} /> Friends List Recognition</li>
+          <li><Check size={16} /> Context History (50 messages)</li>
+          <li><Check size={16} /> Custom Personality Prompts</li>
+        </ul>
+      </motion.div>
+  
+      {/* Feature 5 - Intelligent Responses */}
+      <motion.div className="key-feature-card" whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
+        <div className="feature-icon-large">
+          <Brain size={32} />
+        </div>
+        <h3>Intelligent Responses</h3>
+        <p>AI decides when to respond</p>
+        <ul className="feature-list">
+          <li><Check size={16} /> Context-Aware Detection</li>
+          <li><Check size={16} /> Natural Conversation Flow</li>
+          <li><Check size={16} /> Auto Reactions 💖</li>
+          <li><Check size={16} /> Smart Reply Timing</li>
+        </ul>
+      </motion.div>
+  
+      {/* Feature 6 - Privacy Control */}
+      <motion.div className="key-feature-card" whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
+        <div className="feature-icon-large">
+          <Shield size={32} />
+        </div>
+        <h3>Privacy & Control</h3>
+        <p>Your data stays private</p>
+        <ul className="feature-list">
+          <li><Check size={16} /> Your Own API Keys</li>
+          <li><Check size={16} /> No Data Collection</li>
+          <li><Check size={16} /> Local Storage Only</li>
+          <li><Check size={16} /> Full Transparency</li>
+        </ul>
+      </motion.div>
+    </div>
+  </motion.section>
+  
 
         {/* Screenshots & Demo Section */}
         <motion.section 
@@ -513,49 +535,71 @@ export default function Chatbot() {
         </motion.section>
 
         {/* Changelog Section */}
-        <motion.section
-          className="examples-section"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <div className="section-header">
-            <h2>Version History</h2>
-            <p>Track all updates and improvements</p>
+<motion.section 
+  className="examples-section" 
+  initial={{ opacity: 0, y: 30 }} 
+  whileInView={{ opacity: 1, y: 0 }} 
+  viewport={{ once: true }}
+>
+  <div className="section-header">
+    <h2>Version History</h2>
+    <p>Track all updates and improvements</p>
+  </div>
+  
+  <div className="profile-showcase" style={{ gridTemplateColumns: '1fr' }}>
+    {/* Version 1.4 - Current */}
+    <div className="profile-card">
+      <div className="profile-header">
+        <h3>Version 1.4 🚀</h3>
+        <span className="profile-badge">Current</span>
+      </div>
+      <p className="profile-prompt" style={{ fontStyle: 'normal' }}>
+        December 8, 2025 - Major Feature Update
+      </p>
+      <div className="profile-features" style={{ flexDirection: 'column', gap: '8px' }}>
+        <span>✅ Added Groq API support with ultra-fast LPU acceleration</span>
+        <span>✅ 10+ AI models (Gemini 2.0/2.5/3.0 + Llama 3.1/3.3)</span>
+        <span>✅ Enterprise-grade tab-based UI redesign</span>
+        <span>✅ Smart model switching with auto-validation</span>
+        <span>✅ Loading states, improved validation & error handling</span>
+        <span>✅ Real-time status indicators & model display</span>
+      </div>
+    </div>
+
+    {/* Version 1.0.1 */}
+        <div className="profile-card" style={{ opacity: 0.7 }}>
+          <div className="profile-header">
+            <h3>Version 1.0.1</h3>
+            <span className="profile-badge">Previous</span>
           </div>
-          
-          <div className="profile-showcase" style={{ gridTemplateColumns: '1fr' }}>
-            <div className="profile-card">
-              <div className="profile-header">
-                <h3>Version 1.0.1</h3>
-                <span className="profile-badge">Current</span>
-              </div>
-              <p className="profile-prompt" style={{ fontStyle: 'normal' }}>
-                November 27, 2025 - Bug Fixes & Stability
-              </p>
-              <div className="profile-features" style={{ flexDirection: 'column', gap: '8px' }}>
-                <span>✅ Fixed variable reply-length limits</span>
-                <span>✅ Improved context analysis to prevent non-responses</span>
-                <span>✅ Fixed replies to old messages when scrolled up</span>
-              </div>
-            </div>
-            
-            <div className="profile-card" style={{ opacity: 0.7 }}>
-              <div className="profile-header">
-                <h3>Version 1.0.0</h3>
-                <span className="profile-badge">Previous</span>
-              </div>
-              <p className="profile-prompt" style={{ fontStyle: 'normal' }}>
-                Initial Release
-              </p>
-              <div className="profile-features" style={{ flexDirection: 'column', gap: '8px' }}>
-                <span>🎉 Person Facts Memory</span>
-                <span>🎉 Friends List System</span>
-                <span>🎉 Context-Aware AI</span>
-              </div>
-            </div>
+          <p className="profile-prompt" style={{ fontStyle: 'normal' }}>
+            November 27, 2025 - Bug Fixes & Stability
+          </p>
+          <div className="profile-features" style={{ flexDirection: 'column', gap: '8px' }}>
+            <span>✅ Fixed variable reply-length limits</span>
+            <span>✅ Improved context analysis to prevent non-responses</span>
+            <span>✅ Fixed replies to old messages when scrolled up</span>
           </div>
-        </motion.section>
+        </div>
+    
+        {/* Version 1.0.0 */}
+        <div className="profile-card" style={{ opacity: 0.5 }}>
+          <div className="profile-header">
+            <h3>Version 1.0.0</h3>
+            <span className="profile-badge">Initial</span>
+          </div>
+          <p className="profile-prompt" style={{ fontStyle: 'normal' }}>
+            Initial Release
+          </p>
+          <div className="profile-features" style={{ flexDirection: 'column', gap: '8px' }}>
+            <span>✅ Person Facts Memory</span>
+            <span>✅ Friends List System</span>
+            <span>✅ Context-Aware AI</span>
+          </div>
+        </div>
+      </div>
+    </motion.section>
+    
         
         
         {/* Regular Sections */}
