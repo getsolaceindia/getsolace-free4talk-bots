@@ -456,7 +456,7 @@ export default function Home() {
               className="btn btn-primary btn-large"
             >
               <Coffee size={20} />
-              ☕ Even a small coffee helps us keep building amazing bots!
+              ☕ Buy me a coffee
             </a>
           </motion.div>
         </div>
